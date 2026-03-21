@@ -1,9 +1,9 @@
 class SqliteLsp < Formula
   desc "Language Server Protocol implementation for SQLite"
   homepage "https://github.com/toba/sqlite-lsp"
-  url "https://github.com/toba/sqlite-lsp/releases/download/v0.4.0/sqlite-lsp_darwin_arm64.tar.gz"
-  version "0.4.0"
-  sha256 "8a7ad9fc498d674122a9c523ffc0667cee54b90d61a94180c7b98b0f0a40135e"
+  url "https://github.com/toba/sqlite-lsp/releases/download/v0.5.0/sqlite-lsp_darwin_arm64.tar.gz"
+  version "0.5.0"
+  sha256 "427072bb65e3fd002c0044663d6777cb7cb0c2137640b9602373b4d2fc691745"
   license "MIT"
 
   depends_on :macos
