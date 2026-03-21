@@ -1,9 +1,9 @@
 class Musup < Formula
   desc "Check for new album releases from artists in your music library"
   homepage "https://github.com/toba/musup"
-  url "https://github.com/toba/musup/releases/download/v0.17.1/musup_darwin_arm64.tar.gz"
-  version "0.17.1"
-  sha256 "03cbaca77f7e9a58f8efae1888a69bb9fa54d31937cbd1e888561a1e9c8aae1c"
+  url "https://github.com/toba/musup/releases/download/v0.18.0/musup_darwin_arm64.tar.gz"
+  version "0.18.0"
+  sha256 "0d70f309f21455d472009d7ec009832e662a9a928df7d9c4671be5d58b0c544d"
   license "Apache-2.0"
 
   depends_on :macos
