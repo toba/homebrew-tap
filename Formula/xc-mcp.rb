@@ -1,9 +1,9 @@
 class XcMcp < Formula
   desc "MCP server for Xcode development - build, test, run, and debug iOS/macOS apps"
   homepage "https://github.com/toba/xc-mcp"
-  url "https://github.com/toba/xc-mcp/releases/download/v1.74.1/xc-mcp-v1.74.1-arm64.tar.gz"
-  version "1.74.1"
-  sha256 "09f5431653ddb413765ccfc59fea4e4277c9d9298eb122a2712f12fee0638fdc"
+  url "https://github.com/toba/xc-mcp/releases/download/v1.74.2/xc-mcp-v1.74.2-arm64.tar.gz"
+  version "1.74.2"
+  sha256 "3504a27d937cd7aa251828215c669b0197a11ef13f288b4a9a5c91abf600d9dd"
   license "MIT"
 
   depends_on :macos => :sequoia
