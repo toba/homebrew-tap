@@ -7,12 +7,12 @@ cask "lyrico" do
   desc "Floating synced-lyrics overlay for Swinsian"
   homepage "https://github.com/toba/lyrico"
 
-  depends_on macos: ">= :tahoe"
+  depends_on macos: :tahoe
 
   app "Lyrico.app"
 
   zap trash: [
-    "~/Library/Preferences/app.toba.lyrico.plist",
     "~/Library/Caches/app.toba.lyrico",
+    "~/Library/Preferences/app.toba.lyrico.plist",
   ]
 end
