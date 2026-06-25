@@ -1,9 +1,9 @@
 class Jig < Formula
   desc "Multi-tool CLI for upstream repo monitoring and Claude Code security guard"
   homepage "https://github.com/toba/jig"
-  url "https://github.com/toba/jig/releases/download/v2.36.0/jig_darwin_arm64.tar.gz"
-  version "2.36.0"
-  sha256 "b4a926cbd2c2a5c980bc75c1757f343036fd2393eda9aac3530c2af97f4fb7ff"
+  url "https://github.com/toba/jig/releases/download/v2.36.1/jig_darwin_arm64.tar.gz"
+  version "2.36.1"
+  sha256 "2556c00f00123f83b1df78ec68612cfec70af5cd80d1a56e330685031c7f6d47"
   license "Apache-2.0"
 
   depends_on :macos
