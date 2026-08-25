@@ -1,19 +1,20 @@
 class XcMcp < Formula
   desc "MCP server for Xcode development - build, test, run, and debug iOS/macOS apps"
   homepage "https://github.com/toba/xc-mcp"
-  url "https://github.com/toba/xc-mcp/releases/download/1.110.0/xc-mcp-1.110.0-arm64.tar.gz"
-  version "1.110.0"
-  sha256 "27e1e3acb7cd71955f8e04fd40636432022b9ad4e114396eeb676c75e9a87ece"
+  url "https://github.com/toba/xc-mcp/releases/download/2.0.0/xc-mcp-2.0.0-arm64.tar.gz"
+  version "2.0.0"
+  sha256 "0c22d9fbe6925d278b45edb0c46f22ec9a2533fe3b83418e6bf372528163622c"
   license "MIT"
 
-  depends_on :macos => :sequoia
+  depends_on :macos => :golden_gate
   depends_on arch: :arm64
 
   SERVERS = %w[xc-build xc-debug xc-device xc-project xc-simulator xc-strings xc-swift].freeze
 
   def install
-    # The executable carries an rpath of @loader_path/../lib, so the dylibs
-    # resolve from lib/ in this keg. Dir is empty when the build links statically.
+    # The release links the toba packages static, so the glob is empty. It stays
+    # because a release built without TOBA_STATIC_LINK ships dylibs the executable
+    # reaches through an rpath of @loader_path/../lib.
     lib.install Dir["lib/*.dylib"]
     bin.install "bin/xc-mcp"
     SERVERS.each do |name|
