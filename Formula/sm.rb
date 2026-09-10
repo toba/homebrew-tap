@@ -1,9 +1,9 @@
 class Sm < Formula
   desc "AST-based Swift code analysis CLI — lint, format, and detect anti-patterns"
   homepage "https://github.com/toba/swiftiomatic"
-  url "https://github.com/toba/swiftiomatic/releases/download/4.5.1/sm-4.5.1-arm64.tar.gz"
-  version "4.5.1"
-  sha256 "0ae8b60a96972e3106a019e0f1c7f3022560af5e61708847d960dc392004234d"
+  url "https://github.com/toba/swiftiomatic/releases/download/4.5.2/sm-4.5.2-arm64.tar.gz"
+  version "4.5.2"
+  sha256 "ebb20ec7af5570a6142b01fbbcb7a4cf4d2115bb5ec653fb049d103d6bfd4be4"
   license "MIT"
 
   depends_on :macos => :golden_gate
