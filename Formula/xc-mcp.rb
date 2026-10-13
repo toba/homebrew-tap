@@ -1,9 +1,9 @@
 class XcMcp < Formula
   desc "MCP server for Xcode development - build, test, run, and debug iOS/macOS apps"
   homepage "https://github.com/toba/releases"
-  url "https://github.com/toba/releases/releases/download/xc-mcp-2.10.0/xc-mcp-2.10.0-arm64.tar.gz"
-  version "2.10.0"
-  sha256 "60319b9660d9770b7432d524a6110f5fed26e084fb11cfd76fcf34488178f298"
+  url "https://github.com/toba/releases/releases/download/xc-mcp-2.10.3/xc-mcp-2.10.3-arm64.tar.gz"
+  version "2.10.3"
+  sha256 "07825912b698a07bbc35e0360fd65d6a2d906eae1cbe862d8332497ea6f12194"
   license "MIT"
 
   depends_on :macos => :golden_gate
@@ -12,10 +12,11 @@ class XcMcp < Formula
   SERVERS = %w[xc-build xc-debug xc-device xc-project xc-simulator xc-strings xc-swift].freeze
 
   def install
-    # A release built with TOBA_STATIC_LINK carries no dylib, so the tarball holds
-    # bin alone. Homebrew changes into a lone top-level directory before install
-    # runs, which leaves the executable at the staged root. A release that ships
-    # dylibs holds bin and lib, so no change of directory happens.
+    # The tarball holds bin and the license files, plus lib when the release ships
+    # dylibs, so Homebrew stays at the staged root. A release from before the
+    # license files held bin alone. Homebrew changes into a lone top-level
+    # directory before install runs, which left the executable at the staged root.
+    # Homebrew copies each LICENSE and NOTICE file into the keg with no install call.
     staged = File.directory?("bin") ? "bin" : "."
 
     # The executable reaches a dylib through an rpath of @loader_path/../lib.
