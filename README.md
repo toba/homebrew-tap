@@ -22,5 +22,4 @@ brew install toba/tap/<formula>
 | `musup` | Check for new album releases from artists in your music library |
 | `jig` | Multi-tool CLI for upstream repo monitoring and Claude Code security guard |
 | `xc-mcp` | MCP server for Xcode development |
-| `swiftiomatic` | AST-based Swift code analysis CLI |
 | `go-bigq` | BigQuery SQL linter |

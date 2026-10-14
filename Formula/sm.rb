@@ -6,6 +6,8 @@ class Sm < Formula
   sha256 "b7d35f98f2e726894bbfdac4c1ec2e738e5bc616c19141b7a3395d2d9552a631"
   license "Apache-2.0"
 
+  disable! date: "2026-10-14", because: "installs from a toba/swiftiomatic checkout with scripts/install.sh"
+
   depends_on :macos => :golden_gate
   depends_on arch: :arm64
 
